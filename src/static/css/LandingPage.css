@@ -1,0 +1,185 @@
+.page-bg {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(37, 99, 235, 0.18),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(34, 197, 94, 0.16),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fafc,
+      #eef2ff,
+      #f0f9ff
+    );
+
+  padding-bottom: 3rem;
+}
+
+/* ===============================
+   GLASS EFFECT
+================================ */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(26px) saturate(160%);
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+
+  box-shadow:
+    0 30px 60px rgba(15, 23, 42, 0.12),
+    inset 0 1px 1px rgba(255,255,255,0.6);
+}
+
+
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+  max-width: 900px;
+  margin: 3rem auto 4rem;
+  padding: 3.2rem 2.6rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: auto;
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* ===============================
+   ABOUT SECTION
+================================ */
+.about {
+  padding: 3rem 1rem;
+}
+
+.about-card {
+  max-width: 900px;
+  margin: auto;
+  padding: 2.6rem;
+}
+
+.about h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* ===============================
+   DOCTORS SECTION
+================================ */
+.doctors {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.doctors h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.doctor-grid {
+  max-width: 900px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.6rem;
+}
+
+.doctor-card {
+  padding: 1.6rem;
+}
+
+.doctor-card h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.doctor-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.doctor-card span {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .hero {
+    margin: 2rem 1rem 3rem;
+    padding: 2rem 1.4rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .doctor-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .doctor-card {
+    padding: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    font-size: 0.95rem;
+  }
+}
+

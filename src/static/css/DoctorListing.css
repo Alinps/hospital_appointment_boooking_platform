@@ -1,0 +1,193 @@
+
+/* ===============================
+   PAGE BACKGROUND
+================================ */
+.doctor-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.18), transparent 45%),
+    radial-gradient(circle at 75% 75%, rgba(34, 197, 94, 0.16), transparent 45%),
+    linear-gradient(135deg, #f8fafc, #eef2ff, #f0f9ff);
+
+  padding-bottom: 3rem;
+}
+
+/* ===============================
+   GLASS
+================================ */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(24px) saturate(160%);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.4);
+
+  box-shadow:
+    0 30px 60px rgba(15, 23, 42, 0.12),
+    inset 0 1px 1px rgba(255,255,255,0.6);
+}
+
+/* ===============================
+   HERO
+================================ */
+.doctor-hero {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2.8rem;
+  text-align: center;
+}
+
+.doctor-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-hero p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   CONTROLS
+================================ */
+.doctor-controls {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.4rem 1.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-left h4 {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.filter-right {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+/* ===============================
+   LIST
+================================ */
+.doctor-list {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+
+/* ===============================
+   DOCTOR CARD
+================================ */
+.doctor-card {
+  padding: 1.4rem;
+  text-align: center;
+}
+
+.doctor-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+
+.doctor-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.dept {
+  font-size: 0.85rem;
+  color: #2563eb;
+}
+
+.exp {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.8rem;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+/* .btn-primary {
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+} */
+
+/* .btn-primary:hover {
+  transform: translateY(-1px);
+} */
+
+/* ===============================
+   EMPTY STATE
+================================ */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+}
+
+.empty-state h3 {
+  margin-bottom: 0.4rem;
+}
+
+.empty-state p {
+  color: #64748b;
+}
+
+/* ===============================
+   ERROR
+================================ */
+.error-text {
+  color: red;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* 
+animation fade effect for doctor listing card */
+.fade-list {
+  display: grid;
+  gap: 16px;
+}
+
+.fade-card {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .doctor-controls {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
