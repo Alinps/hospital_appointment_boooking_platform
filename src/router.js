@@ -8,9 +8,11 @@ import Myappointments from "./components/myappointments";
 import Changepassword from "./components/changepassword";
 import Landingpage from "./components/landingpage";
 import Profile from "./components/Profile";
+import ServerWakeup from "./components/ServerWakeup";
 
 const router = createBrowserRouter([
-    { path: '/', element: <Landingpage/> },
+    { path: '/', element: <ServerWakeup/> },
+    { path: '/landing', element: <Landingpage/> },
     {path:'/login',element:<Login/>},
     { path:'/signup',element:<Signup/>},
     { path:'/doctorlistingpage',element:<DoctorListingPage/>},
