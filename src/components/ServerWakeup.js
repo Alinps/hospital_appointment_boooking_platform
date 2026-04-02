@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../static/css/ServerWakeup.css";
+import axios from "axios";
 import checkGuest from "./auth/checkGuest";
 function ServerWakeup() {
   const [status, setStatus] = useState("loading"); 
