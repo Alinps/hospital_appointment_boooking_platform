@@ -35,36 +35,39 @@ function ServerWakeup() {
     wakeServer();
   }, [navigate]);
 
-  return (
-    <div className={`${styles.container}`}>
+
+    return (
+  <div className="page-bg">
+    <div className="loader-card glass">
       {status === "loading" && (
         <>
-          <div className={styles.spinner}></div>
-          <h2>Waking up server...</h2>
-          <p>This may take a few seconds</p>
+          <div className="loader"></div>
+          <h2>Preparing your experience</h2>
+          <p>Connecting securely to hospital services...</p>
         </>
       )}
 
       {status === "success" && (
         <>
-          <div className={styles.success}>✓</div>
-          <h2>Server Ready</h2>
-          <p>Redirecting to login...</p>
+          <div className="success">✓</div>
+          <h2>All systems ready</h2>
+          <p>Redirecting you now...</p>
         </>
       )}
 
       {status === "error" && (
         <>
-          <div className={styles.error}>✕</div>
-          <h2>Something went wrong</h2>
-          <p>Please try again later</p>
+          <div className="error">✕</div>
+          <h2>Unable to connect</h2>
+          <p>Please check your connection or try again</p>
           <button onClick={() => window.location.reload()}>
             Retry
           </button>
         </>
       )}
     </div>
-  );
+  </div>
+);
 }
 
 export default checkGuest(ServerWakeup);
