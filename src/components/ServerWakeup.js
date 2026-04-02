@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../services/api";
 import "../static/css/ServerWakeup.css";
 import checkGuest from "./auth/checkGuest";
 function ServerWakeup() {
@@ -13,7 +12,7 @@ function ServerWakeup() {
       try {
         const start = Date.now();
 
-        const res = await API.get("health_check/");
+        const res = await axios.get("https://hospital-appointment-booking-app-backend.onrender.com/health_check/");
 
         const duration = Date.now() - start;
         console.log("Response time:", duration, "ms");
